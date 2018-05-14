@@ -3,18 +3,47 @@
   <h1>
     Welcome to {{title}}!
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <img width="10" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+
+<button (click)="getUsers()"> display user</button> 
+<br><br>
+<table style="border:1px solid red">
+<th>id</th>
+<th>title</th>
+<th>author</th>
+<th>Actions</th>
+<th>Update</th>
+
+
+<tr *ngFor="let abc of userserservice.users">
+<td>{{abc.id}}</td>
+<td>{{abc.title}}</td>
+<td>{{abc.author}}</td>
+<td><button (click)="Deleteuser(abc)">Delete</button></td>
+
+<td><button (click)="showbutton(abc)">Update</button></td>
+</tr>
+</table>
+<br><br>
+<!-- <button (click)="CreateUser('Sandip','abc')">Create user</button> <br><br>  -->
+
+<button (click)="showbutton()">show data in child component</button> <br><br>
+
+
+<app-user-details *ngIf="showdialog" (gotoparent)="hidecomponent()" [user]=userToUpdate></app-user-details>
+
+
+
+
+<!-- Update user code -->
+
+<!-- <div style="border:1px solid blue;Padding:10px 10px 10px 10px;">
+    <!- <label>id:</label> <input type="text" #id><br><br> -->
+<!-- <label>title:</label> <input type="text" #title><br><br>
+<label>Author:</label> <input type="text" #author> <br><br>
+
+<button (click)="Updateuser(title.value,author.value)">Update user</button>
+
+</div> --> 
 

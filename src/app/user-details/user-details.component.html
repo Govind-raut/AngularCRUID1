@@ -1,0 +1,17 @@
+<p>
+  user-details works!
+</p>
+
+<div  style="border:1px solid blue;Padding:10px 10px 10px 10px;">
+  <!-- <label>id:</label> <input type="text" #id><br><br> -->
+<label>title:</label> <input type="text" [(ngModel)]="user.title"><br><br>
+<label>Author:</label> <input type="text" [(ngModel)]="user.author"> <br><br>
+
+<!-- <button (click)="CreateUser(title.value,author.value)">Create User</button> -->
+
+<!-- <button (click)="gotoparent.emit()">hide Create User</button> -->
+
+<button (click)="createUser()"> <div *ngIf="user.id">Update user </div> <div *ngIf="!user.id">Create User</div></button>
+</div>
+
+<br><br>

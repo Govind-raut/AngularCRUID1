@@ -1,0 +1,48 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server-1",
+      "author": "typicode1"
+    },
+    {
+      "title": "aamnmn",
+      "author": "bb",
+      "id": 2
+    },
+    {
+      "title": "aa1111",
+      "author": "bb11",
+      "id": 3
+    },
+    {
+      "title": "aa11",
+      "author": "aa",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "my comment",
+      "postId": 1
+    },
+    {
+      "id": 3,
+      "body": "my comment-1",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "name": "Govind",
+      "phonenumber": "85654853",
+      "Address": "Pune"
+    }
+  ]
+}
